@@ -1,0 +1,45 @@
+.container .address {
+  text-align: start;
+}
+.address {
+  margin-right: 30px;
+  width: calc((100%-60px) / 4);
+  > a {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+}
+
+.footer-address {
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+
+  color: $primary-white-color;
+
+  > p {
+    margin-bottom: 9px;
+  }
+}
+
+.footer-contact {
+  display: block;
+  margin-bottom: 9px;
+
+  text-decoration: none;
+  font-weight: 400;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  @extend %transition-color;
+
+  color: $footer-contacts-color;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}

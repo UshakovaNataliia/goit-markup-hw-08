@@ -1,0 +1,52 @@
+.agree-text {
+  position: relative;
+  display: block;
+  top: 0;
+  left: 0;
+  padding-left: 10px;
+  margin-bottom: 30px;
+  width: 100%;
+
+  line-height: 1.71;
+  color: $primary-text-color;
+}
+.agree-input {
+  /* -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  position: absolute; */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+
+  &:checked + .agree-icon {
+    border-color: transparent;
+    background-color: $accent-color;
+    background-image: url(../images/agree-icon.svg);
+    fill: $primary-white-color;
+    background-size: contain;
+    background-origin: border-box;
+  }
+}
+.agree-icon {
+  position: absolute;
+  display: block;
+  top: 3px;
+  left: 16px;
+  width: 16px;
+  height: 15px;
+  border-radius: 2px;
+  margin-right: 8px;
+
+  border: 2px solid $secondary-text-color;
+  background-color: $primary-white-color;
+}
+.agree-link {
+  line-height: 1.71;
+  color: $accent-color;
+}

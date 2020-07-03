@@ -1,0 +1,16 @@
+.contacts-nav {
+  margin-left: auto;
+  @extend %flex;
+  a {
+    color: $primary-text-color;
+  }
+  li:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.contact-icon {
+  fill: currentColor;
+  margin-right: 10px;
+  vertical-align: middle;
+}

@@ -1,0 +1,16 @@
+.footer {
+  position: relative;
+  top: 81px;
+  bottom: 0;
+  background-color: $background-footer-color;
+  padding: 60px 0;
+}
+
+.footer > .container {
+  display: flex;
+}
+
+@import "../components/footer/address";
+@import "../components/footer/join";
+@import "../components/footer/subscribe";
+@import "../components/footer/formFooter";

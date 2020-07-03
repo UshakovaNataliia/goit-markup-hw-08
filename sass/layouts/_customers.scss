@@ -1,0 +1,27 @@
+.customer-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90px;
+
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  color: #afb1b8;
+
+  @extend %transition-color;
+  @extend %transition-border;
+  &:hover,
+  &:focus {
+    border-color: $accent-color;
+    color: $accent-color;
+  }
+}
+.customer-logo {
+  width: calc((100% - 150px) / 6);
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+.customer-icon {
+  fill: currentColor;
+}
