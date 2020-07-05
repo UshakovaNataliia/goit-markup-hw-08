@@ -34,7 +34,6 @@ body {
 }
 
 ul {
-  display: flex;
   list-style: none;
   text-decoration: none;
   margin: 0;
@@ -46,3 +45,18 @@ ul {
 
 @import "../components/sectionTitle";
 @import "../components/container";
+
+@media screen and (min-width: 480px) {
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  ul {
+    display: flex;
+  }
+}
+
+// @media screen and (min-width: 1200px) {
+//   .container {
+//     width: 1200px;
+//   }
+// }

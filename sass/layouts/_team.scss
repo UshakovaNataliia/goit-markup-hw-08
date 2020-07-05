@@ -42,3 +42,42 @@
 }
 
 @import "../components/team/network";
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .team-list {
+    flex-direction: column;
+  }
+  .team-list-item {
+    width: 100%;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .team-list {
+    flex-wrap: wrap;
+  }
+  .team-list-item {
+    margin-bottom: 30px;
+    width: calc((100% - 30px) / 2);
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+
+    &:nth-last-child(-n + 2) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team-list-item {
+    width: calc((100% - 90px) / 4);
+    background-color: $primary-white-color;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
