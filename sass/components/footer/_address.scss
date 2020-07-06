@@ -1,12 +1,23 @@
 .container .address {
-  text-align: start;
+  @media screen and (min-width: 1200px) {
+    text-align: start;
+  }
 }
 .address {
-  margin-right: 30px;
-  width: calc((100%-60px) / 4);
   > a {
     display: inline-block;
     margin-bottom: 20px;
+  }
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: 767px) and (max-width: 1199px) {
+    width: calc((100% - 30px) / 2);
+  }
+  @media screen and (min-width: 1200px) {
+    // display: inline-block;
+    margin-right: 30px;
+    width: calc((100% - 30px) / 2);
   }
 }
 

@@ -3,9 +3,6 @@
   > a {
     padding-top: 24px;
     padding-bottom: 24px;
-    //   @media screen and (min-width: 480px) and (max-width: 767px) {
-    //   width: 480px;
-    // }
 
     @media screen and (min-width: 768px) and (max-width: 1199px) {
       margin-right: 56px;
@@ -43,6 +40,9 @@
     &:not(:last-child) {
       margin-right: 25px;
     }
+  }
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    display: none;
   }
 }
 .current {

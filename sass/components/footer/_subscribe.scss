@@ -1,8 +1,10 @@
 .subscribe {
-  margin-left: auto;
-  padding-top: 12px;
-  text-align: left;
-  width: calc((100%-60px) / 2);
+  @media screen and (min-width: 1200px) {
+    margin-left: auto;
+    padding-top: 12px;
+    text-align: left;
+    width: calc(50% - 15px);
+  }
 }
 .subscribe-title {
   display: inline-block;

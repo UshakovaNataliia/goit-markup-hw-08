@@ -6,9 +6,6 @@
   right: 0;
   border-bottom: 1px solid #ececec;
   background-color: $primary-white-color;
-  @media screen and (min-width: 480px) and (max-width: 767px) {
-    display: none;
-  }
 }
 .header > .container {
   display: flex;

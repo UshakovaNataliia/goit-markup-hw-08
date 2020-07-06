@@ -43,7 +43,7 @@
 
 @import "../components/team/network";
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .team-list {
     flex-direction: column;
   }
@@ -54,7 +54,7 @@
     }
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .team-list {
     flex-wrap: wrap;
   }

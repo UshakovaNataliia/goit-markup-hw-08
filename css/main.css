@@ -50,13 +50,24 @@ ul {
 }
 
 .section-title {
-  margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.67;
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1199px) {
+  .section-title {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section-title {
+    margin-bottom: 50px;
+  }
 }
 
 .container {
@@ -126,12 +137,6 @@ ul {
   background-color: #ffffff;
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
-  .header {
-    display: none;
-  }
-}
-
 .header > .container {
   display: flex;
 }
@@ -154,11 +159,15 @@ ul {
   color: #ffffff;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 320px) and (max-width: 1199px) {
   .logo {
     font-size: 24px;
     line-height: 1.17;
   }
+}
+
+.menu-icon {
+  color: black;
 }
 
 .nav > a {
@@ -201,6 +210,12 @@ ul {
   margin-right: 25px;
 }
 
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .site-nav {
+    display: none;
+  }
+}
+
 .current {
   color: #2196f3;
 }
@@ -223,6 +238,12 @@ ul {
 
 .contacts-nav a {
   color: #757575;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .contacts-nav {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -340,7 +361,7 @@ main {
   }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1200px) {
+@media screen and (min-width: 769px) {
   .hero {
     padding-top: 200px;
     padding-bottom: 200px;
@@ -384,12 +405,24 @@ main {
   color: #212121;
 }
 
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .advantage-title {
+    text-align: center;
+  }
+}
+
 .advantage-description {
   width: 100%;
   font-weight: 400;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: #757575;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .advantage-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -504,6 +537,7 @@ main {
 
 .network {
   display: flex;
+  justify-content: center;
 }
 
 .network-title:not(:last-child) {
@@ -526,7 +560,7 @@ main {
   fill: currentColor;
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .team-list {
     flex-direction: column;
   }
@@ -538,7 +572,7 @@ main {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .team-list {
     flex-wrap: wrap;
   }
@@ -565,7 +599,10 @@ main {
 }
 
 .customers {
+  display: flex;
   flex-wrap: wrap;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .customer-link {
@@ -587,7 +624,7 @@ main {
   margin-right: 30px;
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .customer-logo {
     width: calc((100% - 30px) / 2);
     margin-bottom: 30px;
@@ -634,22 +671,60 @@ main {
   padding: 60px 0;
 }
 
-.footer > .container {
-  display: flex;
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .footer > .container {
+    text-align: center;
+  }
 }
 
-.container .address {
-  text-align: start;
+@media screen and (min-width: 1200px) {
+  .footer > .container {
+    display: flex;
+  }
 }
 
-.address {
-  margin-right: 30px;
-  width: calc((100%-60px) / 4);
+@media screen and (min-width: 767px) and (max-width: 1199px) {
+  .footer-tablet {
+    display: flex;
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-tablet {
+    display: flex;
+    width: calc(50% + 45px);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container .address {
+    text-align: start;
+  }
 }
 
 .address > a {
   display: inline-block;
   margin-bottom: 20px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .address {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1199px) {
+  .address {
+    width: calc((100% - 30px) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .address {
+    margin-right: 30px;
+    width: calc((100% - 30px) / 2);
+  }
 }
 
 .footer-address {
@@ -683,10 +758,33 @@ main {
 }
 
 .join {
-  text-align: left;
-  padding-top: 12px;
-  margin-right: 30px;
-  width: calc((100%-60px) / 4);
+  justify-content: center;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .join {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1199px) {
+  .join {
+    width: calc((100% - 30px) / 2);
+    padding-top: 12px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .join {
+    display: inline-block;
+    padding-top: 12px;
+    text-align: left;
+    margin-right: 30px;
+    width: calc((100% - 30px) / 2);
+  }
+  .join .network {
+    justify-content: start;
+  }
 }
 
 .join-title {
@@ -713,11 +811,13 @@ main {
   background-color: #2196f3;
 }
 
-.subscribe {
-  margin-left: auto;
-  padding-top: 12px;
-  text-align: left;
-  width: calc((100%-60px) / 2);
+@media screen and (min-width: 1200px) {
+  .subscribe {
+    margin-left: auto;
+    padding-top: 12px;
+    text-align: left;
+    width: calc(50% - 15px);
+  }
 }
 
 .subscribe-title {
@@ -730,14 +830,21 @@ main {
   color: #ffffff;
 }
 
-.footer-form {
-  display: flex;
+@media screen and (min-width: 320px) and (max-width: 1199px) {
+  .footer-form {
+    display: inline-block;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-form {
+    display: flex;
+  }
 }
 
 .subscribe-input {
-  width: 100%;
   height: 50px;
-  margin-right: 12px;
   padding: 15px 16px;
   font-size: 16px;
   line-height: 1.25;
@@ -751,6 +858,21 @@ main {
 
 .subscribe-input:focus::placeholder {
   color: transparent;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1199px) {
+  .subscribe-input {
+    display: block;
+    margin-bottom: 20px;
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .subscribe-input {
+    margin-right: 12px;
+    width: 100%;
+  }
 }
 
 .subscribe-button {
@@ -805,7 +927,6 @@ main {
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
-  max-width: 528px;
   width: 100%;
   padding: 40px;
   text-align: center;
@@ -813,6 +934,18 @@ main {
   background-color: #ffffff;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1199px) {
+  .modal {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+  }
 }
 
 .modal-title {
@@ -931,11 +1064,25 @@ main {
   display: block;
   top: 0;
   left: 0;
-  padding-left: 10px;
   margin-bottom: 30px;
   width: 100%;
-  line-height: 1.71;
+  line-height: 1.16;
+  letter-spacing: 0.03;
   color: #757575;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1199px) {
+  .agree-text {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .agree-text {
+    font-size: 14px;
+    padding-left: 10px;
+    line-height: 1.71;
+  }
 }
 
 .agree-input {
@@ -966,13 +1113,18 @@ main {
   position: absolute;
   display: block;
   top: 3px;
-  left: 16px;
   width: 16px;
   height: 15px;
   border-radius: 2px;
   margin-right: 8px;
   border: 2px solid #212121;
   background-color: #ffffff;
+}
+
+@media screen and (min-width: 1200px) {
+  .agree-icon {
+    left: 16px;
+  }
 }
 
 .agree-link {
@@ -987,14 +1139,28 @@ main {
 
 .filters {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
 }
 
 @media screen and (min-width: 480px) and (max-width: 767px) {
   .filters {
     flex-wrap: wrap;
     justify-content: start;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1199px) {
+  .filters {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .filters {
+    margin-bottom: 50px;
+    justify-content: center;
   }
 }
 
