@@ -18,38 +18,18 @@
   <body>
     <!--Шапка-->
     <header class="header">
-      <div class="container">
+      <div class="container menu-container">
+        <a href="./index.html" class="logo">
+          Web <span class="logo-studio">Studio</span>
+        </a>
+        <button class="menu-button" data-menu-button>
+          <svg class="menu-icon" width="40px" height="40px">
+            <use class="shown-icon" href="./images/icons.svg#icon-menu"></use>
+            <use class="hidden-icon" href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <!-- <div class="navigation shown" data-menu> -->
         <nav class="nav">
-          <a href="./index.html" class="logo">
-            Web <span class="logo-studio">Studio</span>
-          </a>
-          <button>
-            <svg class="contact-icon" width="40px" height="40px">
-              <use href="./images/icons.svg#icon-menu"></use>
-            </svg>
-          </button>
-          <!-- <button
-            type="button"
-            class="nav-button"
-            data-menu-button=""
-            aria-expanded="true"
-          >
-            <svg
-              class="menu-icon"
-              width="40"
-              height="40"
-              aria-label="переключатель мобильного меню"
-            >
-              <use
-                class="menu-icon-open"
-                href="./images/symb.svg#menu-icon-open"
-              ></use>
-              <use
-                class="menu-icon-close"
-                href="./images/symb.svg#menu-icon-close"
-              ></use>
-            </svg>
-          </button> -->
           <ul class="site-nav">
             <li class="site-nav-title">
               <a href="./index.html" class="link current">Студия</a>
@@ -80,6 +60,7 @@
             >
           </li>
         </ul>
+        <!-- </div> -->
       </div>
     </header>
     <main>

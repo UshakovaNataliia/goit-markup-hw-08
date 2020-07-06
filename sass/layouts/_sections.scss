@@ -2,6 +2,9 @@ main {
   position: relative;
   top: 81px;
   z-index: 0;
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    top: 60px;
+  }
 }
 
 @media screen and (min-width: 320px) and (max-width: 1199px) {
