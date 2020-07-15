@@ -45,7 +45,7 @@
   color: $primary-text-color;
 }
 
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .advantage-item:not(:last-child) {
     margin-bottom: 30px;
   }
@@ -81,7 +81,7 @@
   }
   .advantage-item {
     margin-right: 30px;
-    width: calc((100% - 60px) / 4);
+    width: calc((100% - 90px) / 4);
     &:last-child {
       margin-right: 0;
     }

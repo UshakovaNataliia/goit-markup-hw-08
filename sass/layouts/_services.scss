@@ -1,16 +1,18 @@
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (max-width: 1199px) {
   .services-section {
     display: none;
   }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .services-item {
     position: relative;
+    // display: flex;
 
-    width: calc((100%-60) / 3);
+    width: calc((100% - 60px) / 3);
     margin-right: 30px;
     display: inline-block;
+    border: 0;
 
     text-decoration: none;
     font-weight: 700;
@@ -24,11 +26,12 @@
       margin-right: 0;
     }
     p {
+      position: absolute;
+      width: 100%;
+
       padding-top: 27px;
       padding-bottom: 27px;
       background-color: $background-services-color;
-      width: 100%;
-      position: absolute;
       bottom: 0;
     }
   }

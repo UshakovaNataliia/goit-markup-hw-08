@@ -18,49 +18,55 @@
   <body>
     <!--Шапка-->
     <header class="header">
-      <div class="container menu-container">
+      <div class="container">
         <a href="./index.html" class="logo">
           Web <span class="logo-studio">Studio</span>
         </a>
-        <button class="menu-button" data-menu-button>
-          <svg class="menu-icon" width="40px" height="40px">
-            <use class="shown-icon" href="./images/icons.svg#icon-menu"></use>
-            <use class="hidden-icon" href="./images/icons.svg#icon-close"></use>
+        <button type="button" class="menu-button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+          <svg aria-label="Переключатель мобильного меню" class="menu-icon" width="40px" height="40px">
+            <use
+              class="burger-icon"
+              href="./images/symbol-defs.svg#icon-menu"
+            ></use>
+            <use
+              class="hidden-icon"
+              href="./images/symbol-defs.svg#icon-close"
+            ></use>
           </svg>
         </button>
-        <!-- <div class="navigation shown" data-menu> -->
-        <nav class="nav">
-          <ul class="site-nav">
-            <li class="site-nav-title">
-              <a href="./index.html" class="link current">Студия</a>
-            </li>
-            <li class="site-nav-title">
-              <a href="./portfolio.html" target="_blank" class="link"
-                >Портфолио</a
+        <div class="mobile-menu" data-menu>
+          <nav class="nav">
+            <ul class="site-nav">
+              <li class="site-nav-title">
+                <a href="./index.html" class="link current">Студия</a>
+              </li>
+              <li class="site-nav-title">
+                <a href="./portfolio.html" target="_blank" class="link"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="site-nav-title">
+                <a href="#footer" class="link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="contacts-nav">
+            <li>
+              <a class="link" href="mailto:info@devstudio.com"
+                ><svg class="contact-icon" width="16px" height="11px">
+                  <use href="./images/icons.svg#email"></use></svg
+                >info@devstudio.com</a
               >
             </li>
-            <li class="site-nav-title">
-              <a href="#footer" class="link">Контакты</a>
+            <li>
+              <a class="link last" href="tel:380961111111"
+                ><svg class="contact-icon" width="10px" height="15px">
+                  <use href="./images/icons.svg#phone"></use></svg
+                >+38 096 111 11 11</a
+              >
             </li>
           </ul>
-        </nav>
-        <ul class="contacts-nav">
-          <li>
-            <a class="link" href="mailto:info@devstudio.com"
-              ><svg class="contact-icon" width="16px" height="11px">
-                <use href="./images/icons.svg#email"></use></svg
-              >info@devstudio.com</a
-            >
-          </li>
-          <li>
-            <a class="link last" href="tel:380961111111"
-              ><svg class="contact-icon" width="10px" height="15px">
-                <use href="./images/icons.svg#phone"></use></svg
-              >+38 096 111 11 11</a
-            >
-          </li>
-        </ul>
-        <!-- </div> -->
+        </div>
       </div>
     </header>
     <main>
@@ -135,25 +141,39 @@
           <h2 class="section-title">Чем мы занимаемся</h2>
           <ul class="services">
             <li class="services-item">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="./images/img.jpg 1x, ./images/img@2x.jpg 2x" />
               <img
                 src="./images/img.jpg"
                 alt="Ноутбук"
                 width="370"
                 height="294"
+                alt="Ноутбук"
               />
+            </picture>
               <p>Десктопные приложения</p>
             </li>
             <li class="services-item">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="./images/box.jpg 1x, ./images/box@2x.jpg 2x" />
               <img
                 src="./images/box.jpg"
                 alt="Телефон"
                 width="370"
                 height="294"
               />
+            </picture>
               <p>Мобильные приложения</p>
             </li>
             <li class="services-item">
-              <img src="./images/img1.jpg" alt="Мак" width="370" height="294" />
+              <picture>
+                <source media="(min-width: 1200px)" srcset="./images/img1.jpg 1x, ./images/img1@2x.jpg 2x" />
+              <img
+                src="./images/img1.jpg"
+                alt="Мак"
+                width="370"
+                height="294"
+              />
               <p>Дизайнерские решения</p>
             </li>
           </ul>
@@ -165,7 +185,12 @@
           <h2 class="section-title">Наша команда</h2>
           <ul class="team-list">
             <li class="team-list-item">
-              <img src="./images/pd.jpg" alt="Николай Кучеренко" height="260" />
+              <picture>
+                    <source media="(max-width: 767px)" srcset="./images/pd-mobile.jpg 1x, ./images/pd-mobile@2x.jpg 2x" />
+                    <source media="(min-width: 768px) and (max-width: 1199px)" srcset="./images/pd-tablet.jpg 1x, ./images/pd-tablet@2x.jpg 2x" />
+                    <source media="(min-width: 1200px)" srcset="./images/pd.jpg 1x, ./images/pd@2x.jpg 2x" />
+                              <img src="./images/pd.jpg" alt="Николай Кучеренко" height="260" />
+                  </picture>              
               <div class="team-description">
                 <h3 class="team-list-title">
                   Николай Кучеренко
@@ -201,7 +226,21 @@
               </div>
             </li>
             <li class="team-list-item">
-              <img src="./images/fd.jpg" alt="Ольга Иванова" height="260" />
+              <picture>
+                <source media="(max-width: 767px)" srcset="
+                            ./images/fd-mobile.jpg 1x,
+                            ./images/fd-mobile@2x.jpg 2x
+                          " />
+                <source media="(min-width: 768px) and (max-width: 1199px)" srcset="
+                            ./images/fd-tablet.jpg 1x,
+                            ./images/fd-tablet@2x.jpg 2x
+                          " />
+                <source media="(min-width: 1200px)" srcset="
+                            ./images/fd.jpg 1x,
+                            ./images/fd@2x.jpg 2x
+                          " />
+                          <img src="./images/fd.jpg" alt="Ольга Иванова" height="260" />
+              </picture>
               <div class="team-description">
                 <h3 class="team-list-title">Ольга Иванова</h3>
                 <p class="profession" lang="en">Frontend Developer</p>
@@ -235,7 +274,21 @@
               </div>
             </li>
             <li class="team-list-item">
-              <img src="./images/m.jpg" alt="Андрей Шевченко" height="260" />
+              <picture>
+                    <source media="(max-width: 767px)" srcset="
+                  							./images/m-mobile.jpg 1x,
+                  							./images/m-mobile@2x.jpg 2x
+                  						" />
+                    <source media="(min-width: 768px) and (max-width: 1199px)" srcset="
+                  							./images/m-tablet.jpg 1x,
+                  							./images/m-tablet@2x.jpg 2x
+                  						" />
+                    <source media="(min-width: 1200px)" srcset="
+                  							./images/m.jpg 1x,
+                  							./images/m@2x.jpg 2x
+                              " />
+                              <img src="./images/m.jpg" alt="Андрей Шевченко" height="260" />
+                  </picture>
               <div class="team-description">
                 <h3 class="team-list-title">Андрей Шевченко</h3>
                 <p class="profession" lang="en">Marketing</p>
@@ -269,7 +322,21 @@
               </div>
             </li>
             <li class="team-list-item">
-              <img src="./images/ui.jpg" alt="Иван Николаев" height="260" />
+              <picture>
+                <source media="(max-width: 767px)" srcset="
+                            ./images/ui-mobile.jpg 1x,
+                            ./images/ui-mobile@2x.jpg 2x
+                          " />
+                <source media="(min-width: 768px) and (max-width: 1199px)" srcset="
+                            ./images/ui-tablet.jpg 1x,
+                            ./images/ui-tablet@2x.jpg 2x
+                          " />
+                <source media="(min-width: 1200px)" srcset="
+                            ./images/ui.jpg 1x,
+                            ./images/ui@2x.jpg 2x
+                          " />
+                          <img src="./images/ui.jpg" alt="Иван Николаев" height="260" />
+              </picture>
               <div class="team-description">
                 <h3 class="team-list-title">Иван Николаев</h3>
                 <p class="profession" lang="en">UI Designer</p>
@@ -501,5 +568,6 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
