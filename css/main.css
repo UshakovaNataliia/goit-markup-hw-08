@@ -145,15 +145,13 @@ ul {
 
 @media screen and (max-width: 767px) {
   .header > .container {
-    padding: 16px 15px;
+    padding: 10px 15px;
   }
 }
 
 @media screen and (max-width: 767px) {
   .header > .container {
     position: relative;
-    top: 0;
-    left: 0;
   }
 }
 
@@ -538,7 +536,8 @@ main {
     padding-bottom: 118px;
   }
   .hero-title {
-    width: 360px;
+    width: 100%;
+    max-width: 360px;
     font-size: 26px;
     line-height: 1.36;
   }
