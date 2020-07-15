@@ -9,7 +9,6 @@ html {
 }
 
 img {
-  display: block;
   max-width: 100%;
   height: auto;
 }
@@ -54,9 +53,3 @@ ul {
     display: flex;
   }
 }
-
-// @media screen and (min-width: 1200px) {
-//   .container {
-//     width: 1200px;
-//   }
-// }

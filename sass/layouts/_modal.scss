@@ -31,7 +31,6 @@
   transform: translate(-50%, -50%) scale(1);
   transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  // max-width: 528px;
   width: 100%;
   padding: 40px;
   text-align: center;
@@ -59,7 +58,9 @@
 
   color: $secondary-text-color;
 }
-
+.send {
+  justify-content: center;
+}
 @import "../components/modal/close-icon";
 @import "../components/modal/input";
 @import "../components/modal/ckeckboxIcon";

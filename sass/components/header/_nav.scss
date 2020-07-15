@@ -84,6 +84,7 @@
 }
 
 .menu-button {
+  @extend %transition-color;
   &:hover,
   &:focus {
     fill: $accent-color;
